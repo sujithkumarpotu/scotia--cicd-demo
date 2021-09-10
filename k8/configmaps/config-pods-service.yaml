@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld-config-service
+  labels:
+    app: helloworld-config
+spec:
+  ports:
+  - port: 7777
+    protocol: TCP
+  selector:
+    app: helloworld-config
+  type: NodePort
